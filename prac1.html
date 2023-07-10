@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: beige;
+            text-align: center;
+            padding: 50px;
+            
+        }
+        h1{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        button{
+            padding:6px 12px;
+            margin:15px 0 10px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        button:hover{
+            background: #4b99d8;
+        }
+    </style>
+
+    <h1>swapping numbers </h1>
+    <p>Before swapping</p>
+    <div>
+        <p>number1</p>
+     <input type="text"  id="pid">
+    </div>
+    <div>
+        <p>number2</p>
+     <input type="text"  id="pid2"><br>
+    </div>
+    <button onclick="func1()" class="fun">click</button>
+    <div id="res"></div>
+    <div id="res1"> </div>
+    
+    <script>
+   
+    function func1(){
+        let num = Number(document.getElementById('pid').value)
+        let num1 = Number(document.getElementById('pid2').value)
+        num = num + num1
+        num1 = num - num1
+        num = num - num1 
+        let result =document.getElementById('res')
+        let result1= document.getElementById('res1')
+        result.innerHTML= "After swapping <br> number1 <br>"+num
+        result1.innerHTML="number2 <br>"+num1
+
+    }
+    
+
+    </script>
+    
+</body>
+</html>
